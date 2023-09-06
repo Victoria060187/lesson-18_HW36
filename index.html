@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson 18 HW36</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="registration-form">
+        <div class="form-group">
+            <label for="first-name">Ім'я:</label>
+            <input type="text" id="first-name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="last-name">Прізвище:</label>
+            <input type="text" id="last-name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Дата народження:</label>
+            <input type="text" id="dob" required placeholder="ДД/ММ/РРРР">
+        </div>
+
+        <div class="form-group">
+            <label>Стать:</label>
+            <input type="radio" name="gender" value="Чоловік" required>Чоловік
+            <input type="radio" name="gender" value="Жінка" required>Жінка
+        </div>
+
+        <div class="form-group">
+            <label for="city">Місто:</label>
+            <select id="city" required>
+                <option value="Київ">Київ</option>
+                <option value="Львів">Львів</option>
+                <option value="Харків">Харків</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Адреса:</label>
+            <textarea id="address" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Мови, якими володієте:</label><br>
+            <input type="checkbox" name="languages" value="Англійська">Англійська
+            <input type="checkbox" name="languages" value="Французька">Французька
+            <input type="checkbox" name="languages" value="Іспанська">Іспанська
+        </div>
+
+        <div class="form-group">
+            <input type="button" value="Зберегти" onclick="displayData()">
+        </div>
+    </form>
+
+    <div id="data-table" style="display: none;">
+        <h2>Введені дані:</h2>
+        <table border="1">
+            <tr>
+                <th>Ім'я</th>
+                <th>Прізвище</th>
+                <th>Дата народження</th>
+                <th>Стать</th>
+                <th>Місто</th>
+                <th>Адреса</th>
+                <th>Мови</th>
+            </tr>
+            <tbody id="data-body"></tbody>
+        </table>
+    </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
